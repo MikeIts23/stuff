@@ -1,0 +1,90 @@
+Android (Kotlin/Java)
+Official Android Developers
+https://developer.android.com
+— La bibbia ufficiale, con tutorial, guide e API reference.
+
+Stack Overflow
+https://stackoverflow.com/questions/tagged/android
+— Domande e risposte praticamente su tutto.
+
+GitHub
+https://github.com/topics/android
+— Repository di progetti open source, esempi reali.
+
+Android Weekly
+https://androidweekly.net/
+— Newsletter e raccolte settimanali di snippet e librerie.
+
+CodePath Android Cliffnotes
+https://guides.codepath.com/android
+— Guide concise e esempi pratici.
+
+Flutter
+Official Flutter Docs
+https://flutter.dev/docs
+— Documentazione ufficiale e esempi.
+
+Flutter by Example
+https://flutterbyexample.com/
+— Esempi pratici e progetti tutorial.
+
+Stack Overflow
+https://stackoverflow.com/questions/tagged/flutter
+— Supporto dalla community.
+
+GitHub (Flutter topic)
+https://github.com/topics/flutter
+— Codice open source.
+
+Awesome Flutter
+https://github.com/Solido/awesome-flutter
+— Raccolta di librerie e risorse.
+
+Swift (iOS)
+Apple Developer
+https://developer.apple.com/documentation/swift
+— Documentazione ufficiale Swift e iOS.
+
+Swift by Sundell
+https://www.swiftbysundell.com/
+— Blog, articoli e esempi.
+
+Stack Overflow
+https://stackoverflow.com/questions/tagged/swift
+— Community di supporto.
+
+Ray Wenderlich
+https://www.raywenderlich.com/ios
+— Tutorial iOS e Swift molto dettagliati.
+
+GitHub (Swift topic)
+https://github.com/topics/swift
+— Progetti open source.
+
+React Native
+Official React Native Docs
+https://reactnative.dev/docs/getting-started
+— Guida e API ufficiali.
+
+React Native Express
+https://www.reactnative.express/
+— Tutorial passo-passo.
+
+Stack Overflow
+https://stackoverflow.com/questions/tagged/react-native
+— Supporto e snippet.
+
+GitHub (React Native topic)
+https://github.com/topics/react-native
+— Codice open source e esempi.
+
+Awesome React Native
+https://github.com/jondot/awesome-react-native
+— Raccolta di risorse, librerie e tool.
+
+Extra utili per tutti i linguaggi
+DevDocs — https://devdocs.io/
+Un unico posto per cercare API di tanti linguaggi e framework.
+
+MDN Web Docs — https://developer.mozilla.org/
+Fondamentale per JavaScript, React Native, e web-related stuff.
