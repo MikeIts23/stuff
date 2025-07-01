@@ -1,0 +1,63 @@
+
+Guida base per creare app Lista + Preferiti con Bottom Navigation
+===============================================================
+
+1) Swift iOS (SwiftUI)
+---------------------
+
+- Apri Xcode e crea un nuovo progetto SwiftUI.
+- Sostituisci il contenuto di ContentView.swift con il codice Swift fornito (incluso UserDefaults per persistenza e swipe actions).
+- Compila e avvia sul simulatore o dispositivo reale.
+- Per aggiungere nuovi item, modifica la lista hardcoded in ItemViewModel.
+- Puoi estendere l'app con funzionalità extra, ma questa è la base per una lista con preferiti funzionante.
+
+---
+
+2) React Native
+---------------
+
+- Assicurati di avere Node.js e React Native CLI installati.
+- Crea un nuovo progetto React Native:
+  npx react-native init NomeProgetto
+- Installa le dipendenze necessarie per navigazione, AsyncStorage, gesture handler, e icone:
+  npm install @react-navigation/native @react-navigation/bottom-tabs react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-async-storage/async-storage react-native-vector-icons
+- Se sviluppi per iOS, esegui:
+  cd ios && pod install && cd ..
+- Sostituisci il contenuto di App.js con il codice React Native fornito.
+- Avvia l'app con:
+  npx react-native run-android
+  o
+  npx react-native run-ios
+
+---
+
+3) Flutter
+----------
+
+- Assicurati di avere installato Flutter SDK.
+- Crea un nuovo progetto Flutter:
+  flutter create nome_progetto
+- Apri il file pubspec.yaml e aggiungi la dipendenza:
+  dependencies:
+    shared_preferences: ^2.0.15
+- Esegui:
+  flutter pub get
+- Sostituisci il contenuto di lib/main.dart con il codice Flutter fornito.
+- Avvia l'app con:
+  flutter run
+
+---
+
+Note generali
+-------------
+
+- Per tutte le piattaforme, i dati dei preferiti sono salvati localmente (UserDefaults, AsyncStorage, SharedPreferences).
+- La lista degli oggetti è hardcoded nel codice: puoi modificarla per adattarla ai tuoi dati.
+- L'app mostra una bottom navigation con due tab: Lista e Preferiti.
+- Nella lista puoi cliccare una card per espandere la descrizione.
+- Puoi aggiungere o rimuovere preferiti cliccando sulla stella o usando lo swipe.
+- La persistenza ti permette di mantenere i preferiti anche dopo aver chiuso l'app.
+
+---
+
+Se hai bisogno, posso creare anche dei progetti zip di esempio per velocizzare l'inizio.
