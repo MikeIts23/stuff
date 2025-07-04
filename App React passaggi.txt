@@ -1,0 +1,100 @@
+# Riassunto dello Sviluppo dell’App Fumetti
+
+Questo documento riepiloga i passaggi principali che abbiamo seguito per creare l’app dei fumetti in React Native con **Expo Router**.
+
+---
+
+## 1. Setup Ambiente
+
+1. Installazione di **Node.js** (versione LTS).
+2. Creazione del progetto React Native con Expo, fuori da OneDrive:
+   ```bash
+   cd %USERPROFILE%\Desktop
+   mkdir ReactNative
+   cd ReactNative
+   npx create-expo-app ComicApp
+   ```
+3. Installazione delle dipendenze base:
+   ```bash
+   npm run web
+   ```
+
+---
+
+## 2. Struttura delle Cartelle
+
+- **`app/`**: contiene tutte le pagine con Expo Router.
+- **`app/(tabs)/_layout.tsx`**: layout per la bottom tab navigation.
+- **`app/(tabs)/index.tsx`**: schermata Home (lista fumetti).
+- **`app/(tabs)/favorites.tsx`**: schermata Preferiti.
+- **`app/details/[id].tsx`**: schermata Dettaglio dinamica.
+- **`data/comics.ts`**: dati statici dei fumetti (id, titolo, universo, descrizione, immagine).
+- **`assets/images/`**: immagini locali delle copertine.
+
+---
+
+## 3. Dati dei Fumetti
+
+- Creato `data/comics.ts` con un array di oggetti:
+  ```ts
+  export const comics = [
+    { id: '1', title: 'Spider-Man', universe: 'Marvel', description: '...', image: SpiderImg },
+    ...
+  ];
+  ```
+- Le immagini sono salvate in `assets/images` e importate in `data/comics.ts`.
+
+---
+
+## 4. Routing (Expo Router)
+
+- **`_layout.tsx`**: definisce due tab:
+  - **Esplora** (`index.tsx`)
+  - **Preferiti** (`favorites.tsx`)
+- **Pagine dinamiche**: `app/details/[id].tsx` usa `useLocalSearchParams` per ottenere `id`.
+
+---
+
+## 5. Schermata Home
+
+- Utilizzo di **`FlatList`** con filtro per universe (Tutti, Marvel, DC, Manga).
+- Ogni elemento mostra:
+  - Miniatura (`<Image>`)
+  - Titolo
+  - Universo
+- Layout basato su `flexDirection: 'row'` e card con ombra.
+
+---
+
+## 6. Schermata Dettaglio
+
+- Recupera il fumetto per `id` e mostra:
+  - Immagine grande
+  - Titolo
+  - Universo
+  - Descrizione
+  - Bottone per aggiungere/rimuovere dai preferiti
+- Uso di **`AsyncStorage`** per salvare lo stato nei preferiti.
+- `Alert.alert` per conferma operazione.
+- Sfondo chiaro (`#f0f4f8`).
+
+---
+
+## 7. Tab Preferiti
+
+- In `favorites.tsx`:
+  - Hook `useFocusEffect` per ricaricare i dati quando la tab è in focus.
+  - `FlatList` dei fumetti salvati.
+  - Messaggio se la lista è vuota.
+
+---
+
+## 8. Debug e Ottimizzazioni
+
+- Rimozione dei DevTools di Expo Router in web con `--no-dev`.
+- Correzione di URL CORS o passaggio a immagini locali.
+- Nascondere header di sistema in `_layout.tsx` con `headerShown: false`.
+
+---
+
+**Fine del riassunto**
